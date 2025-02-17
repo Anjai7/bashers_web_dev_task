@@ -1,0 +1,152 @@
+/* CSS Variables */
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--soft-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+/* Card Container */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    max-width: 350px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+/* Image Container with Hover Effect */
+.image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-image {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: hsla(178, 100%, 50%, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.view-icon {
+    width: 48px;
+}
+
+/* Title */
+.title {
+    color: var(--white);
+    font-size: 1.375rem;
+    margin: 1.5rem 0 1rem;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: var(--cyan);
+}
+
+/* Description */
+.description {
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Details Section */
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 1rem;
+}
+
+.price, .time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.time {
+    color: var(--soft-blue);
+}
+
+/* Creator Section */
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 33px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.creator-text {
+    color: var(--soft-blue);
+}
+
+.creator-name {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.creator-name:hover {
+    color: var(--cyan);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 375px) {
+    .card {
+        padding: 1.25rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
