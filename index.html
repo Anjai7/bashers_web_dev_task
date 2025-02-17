@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrium NFT Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
 </head>
-<body style="color: hsl(217, 54%, 11%);">
-  <div
-    class="container-fluid "
-  >
-    <div
-      class="row justify-content-center align-items-center"
-    >
-      <div class="card text-center">
-        <img class="card-img-top" src="images/image-equilibrium.jpg" alt="Title" />
-        <div class="card-body">
-          <h4 class="card-title">Equilibriuum #3429</h4>
-          <p class="card-text">our equilibrium collection promotes balence and calm</p>
+<body>
+    <div class="card">
+        <!-- Image with Overlay -->
+        <div class="image-container">
+            <img src="./images/image-equilibrium.jpg" alt="Equilibrium NFT" class="main-image">
+            <div class="overlay">
+                <img src="./images/icon-view.svg" alt="View Icon" class="view-icon">
+            </div>
         </div>
-      </div>
-      
-         
-      </div>
-      
+
+        <!-- Title -->
+        <h1 class="title">Equilibrium #3429</h1>
+
+        <!-- Description -->
+        <p class="description">
+            Our Equilibrium collection promotes balance and calm.
+        </p>
+
+        <!-- Details (Price and Time Left) -->
+        <div class="details">
+            <div class="price">
+                <img src="./images/icon-ethereum.svg" alt="Ethereum Icon">
+                <span>0.041 ETH</span>
+            </div>
+            <div class="time">
+                <img src="./images/icon-clock.svg" alt="Clock Icon">
+                <span>3 days left</span>
+            </div>
+        </div>
+
+        <!-- Creator Info -->
+        <div class="creator">
+            <img src="./images/image-avatar.png" alt="Creator Avatar" class="avatar">
+            <p class="creator-text">
+                Creation of <span class="creator-name">Jules Wyvern</span>
+            </p>
+        </div>
     </div>
-    
-  </div>
-  
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
